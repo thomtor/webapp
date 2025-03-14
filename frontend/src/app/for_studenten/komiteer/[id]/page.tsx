@@ -75,7 +75,19 @@ const KomitePage = ({ params }: { params: { id: string } }) => {
           <p className='text-sm'>{data?.text3}</p>
         </div>
         <div className='w-full flex flex-col items-center justify-center'>
+        {data?.navn === "KomKom" && (
+            <div className='flex flex-col justify-center items-center py-2 space-y-2'>Vil du sende inn sladder til Ampere og Nå?
+              <a
+                href={"https://docs.google.com/forms/d/e/1FAIpQLSe9jR_9tQ1UKX7eaTleI6OXNVsfhbUKDKkV9rCXXWF9pTGXJA/viewform?fbclid=IwY2xjawJA2dJleHRuA2FlbQIxMQABHRiyZJNvEAp2dzA_1NOqCTOeLxyJs3ik5Xvo-enDLnKGhmsDdhojR0PXwA_aem_bj-GHDA0PJQVbBH6-uy1CQ"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant='outline' className='bg-green-mid-backdrop text-white hover:bg-[#80b0b7] hover:text-white"'>Her kan du sende inn</Button>
+              </a>
+            </div>
+          )}
           <div className='max-w-[512px] p-4 bg-green-mid-backdrop rounded-md text-center'>
+            
               {leder ? (
                 <>
                   <p className='font-bold text-base'>Leder: {data?.leder}</p>
@@ -89,7 +101,7 @@ const KomitePage = ({ params }: { params: { id: string } }) => {
                 <>
                 <p>Komite har hverken leder eller mail.
                   <br></br>
-                   Ta kontakt med hovedstyret for spørsmål angående komiteen: styret@emilweb.no</p>
+                   Ta kontakt med hovedstyret for spørsmål angående komiteen: styret@emilntnu.no</p>
                 </>
               )}
           </div>
@@ -105,6 +117,7 @@ const KomitePage = ({ params }: { params: { id: string } }) => {
               </a>
             </div>
           )}
+          
         </div>
       </div>
     </div>
